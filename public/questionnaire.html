@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TS Specialist Tax Services — LLP Formation &amp; Asset Introduction Questionnaire</title>
+<style>
+  :root {
+    --orange: #E8751A;
+    --orange-dark: #C96215;
+    --orange-light: #F08A3A;
+    --orange-pale: #FDF3EB;
+    --charcoal: #333333;
+    --charcoal-light: #555555;
+    --bg: #fafafa;
+    --white: #ffffff;
+    --border: #ddd;
+    --text: #333333;
+    --text-light: #777;
+    --red: #c0392b;
+    --green: #27ae60;
+    --section-bg: #fafaf8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 0;
+  }
+  .header {
+    background: var(--white);
+    color: var(--charcoal);
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--orange);
+  }
+  .header-logo {
+    height: 52px;
+    width: auto;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 13px;
+    color: var(--text-light);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .subtitle-bar {
+    background: var(--orange);
+    color: var(--white);
+    padding: 12px 40px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  .intro-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--orange);
+    padding: 24px 28px;
+    margin-bottom: 30px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .intro-box p { margin-bottom: 10px; }
+  .intro-box p:last-child { margin-bottom: 0; }
+
+  /* Sections */
+  .section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .section-header {
+    background: var(--orange);
+    color: var(--white);
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .section-header:hover { background: var(--orange-dark); }
+  .section-header .chevron {
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .section-header.collapsed .chevron { transform: rotate(-90deg); }
+  .section-body { padding: 24px; }
+  .section-body.hidden { display: none; }
+
+  .subsection {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #eee;
+  }
+  .subsection:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  .subsection-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Form elements */
+  .field-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+  .field-row label {
+    flex: 0 0 320px;
+    font-size: 13.5px;
+    padding-top: 7px;
+    color: var(--text);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .field-row input[type="text"],
+  .field-row input[type="email"],
+  .field-row input[type="tel"],
+  .field-row input[type="date"],
+  .field-row input[type="number"],
+  .field-row select,
+  .field-row textarea {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .field-row input:focus,
+  .field-row select:focus,
+  .field-row textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 2px rgba(232,117,26,0.2);
+  }
+  .field-row textarea { min-height: 80px; resize: vertical; }
+
+  /* Yes/No toggle */
+  .yn-group {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+  }
+  .yn-btn {
+    padding: 7px 20px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: var(--white);
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .yn-btn:hover { border-color: var(--orange); }
+  .yn-btn.selected-yes { background: var(--green); color: white; border-color: var(--green); }
+  .yn-btn.selected-no { background: #999; color: white; border-color: #999; }
+
+  /* Partner blocks */
+  .partner-block {
+    background: var(--section-bg);
+    border: 1px solid #e8e6e0;
+    border-radius: 4px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+  .partner-block-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* Property appendix */
+  .property-block {
+    background: var(--section-bg);
+    border: 1px solid #e8e6e0;
+    border-radius: 4px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+  .property-block-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* Conditional sections */
+  .conditional { display: none; }
+  .conditional.visible { display: block; }
+
+  /* Table-style rows for checklists */
+  .checklist-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0eeea;
+    gap: 12px;
+  }
+  .checklist-row:last-child { border-bottom: none; }
+  .checklist-label {
+    flex: 1;
+    font-size: 13.5px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .checklist-input {
+    flex: 0 0 200px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 8px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.08);
+  }
+  .sidebar .btn {
+    padding: 10px 14px;
+    font-size: 11px;
+    white-space: nowrap;
+    text-align: left;
+    width: 100%;
+  }
+  .btn {
+    padding: 12px 32px;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: all 0.2s;
+  }
+  .btn-primary { background: var(--orange); color: var(--white); }
+  .btn-primary:hover { background: var(--orange-dark); }
+  .btn-gold { background: var(--charcoal); color: var(--white); }
+  .btn-gold:hover { background: var(--charcoal-light); }
+  .btn-outline { background: var(--white); color: var(--orange); border: 2px solid var(--orange); }
+  .btn-outline:hover { background: var(--orange); color: var(--white); }
+  .btn-save { background: var(--green); color: var(--white); }
+  .btn-save:hover { background: #219a52; }
+
+  /* Progress bar */
+  .progress-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  .progress-track {
+    flex: 1;
+    height: 6px;
+    background: #e8e6e0;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    border-radius: 3px;
+    transition: width 0.3s;
+    width: 0%;
+  }
+
+  /* Notes */
+  .field-note {
+    font-size: 12px;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 4px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .required-star { color: var(--red); }
+
+  /* Add property button */
+  .add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    background: var(--section-bg);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-light);
+    margin-top: 10px;
+    transition: all 0.15s;
+  }
+  .add-btn:hover { border-color: var(--orange); color: var(--orange); }
+  .remove-asset-btn {
+    position: absolute; top: 8px; right: 10px;
+    width: 24px; height: 24px; line-height: 22px; text-align: center;
+    font-size: 18px; font-weight: bold; color: #999;
+    cursor: pointer; border-radius: 50%;
+    transition: all 0.15s;
+  }
+  .remove-asset-btn:hover { color: var(--red); background: #fdecea; }
+
+  /* Print styles */
+  @media print {
+    .progress-bar, .sidebar, .add-btn, .no-print { display: none !important; }
+    .section-body.hidden { display: block !important; }
+    .conditional { display: block !important; }
+    body { background: white; }
+    .header { padding: 20px; }
+    .container { margin: 0; max-width: 100%; }
+    .section { page-break-inside: avoid; }
+  }
+
+  /* ===== TAB SYSTEM ===== */
+  .tab-bar {
+    position: sticky;
+    top: 86px;
+    z-index: 99;
+    background: var(--white);
+    border-bottom: 2px solid #e8e6e0;
+    padding: 0 40px;
+    display: flex;
+    gap: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .tab-button {
+    padding: 12px 20px;
+    border: none;
+    background: #f5f5f5;
+    color: var(--charcoal);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+  }
+  .tab-button:hover { background: #e8e8e8; }
+  .tab-button.active { background: #4A6FA5; color: white; border-bottom: 3px solid #4A6FA5; }
+  .tab-content { display: none; }
+  .tab-content.visible { display: block; }
+  .sidebar-tab-shortcuts { display: flex; flex-direction: column; gap: 4px; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid #ddd; }
+  .btn-tab-shortcut { padding: 8px 12px !important; font-size: 11px !important; background: #4A6FA5 !important; color: white !important; border: none !important; }
+  .btn-tab-shortcut:hover { background: #3a5785 !important; }
+
+  /* ===== FIELD FADING ===== */
+  .field-row.field-filled { opacity: 0.45; position: relative; }
+  .field-row.field-filled label, .field-row.field-filled input, .field-row.field-filled textarea, .field-row.field-filled select { color: #999; }
+  .field-row.field-filled input::placeholder, .field-row.field-filled textarea::placeholder { color: #bbb; }
+  .checklist-row.field-filled { opacity: 0.45; position: relative; }
+  .checklist-row.field-filled .checklist-label { color: #999; }
+  /* Pinned / un-greyed override */
+  .field-row.field-pinned, .checklist-row.field-pinned { opacity: 1 !important; }
+  .field-row.field-pinned label, .field-row.field-pinned input, .field-row.field-pinned textarea, .field-row.field-pinned select { color: var(--text) !important; }
+  .checklist-row.field-pinned .checklist-label { color: var(--text) !important; }
+  /* Row checkbox */
+  .row-check {
+    flex-shrink: 0;
+    margin-left: 6px;
+    align-self: center;
+    width: 16px; height: 16px;
+    accent-color: var(--orange);
+    cursor: pointer;
+  }
+  /* Tab-complete fading — when all fields in a tab are done */
+  .tab-button.tab-complete { opacity: 0.4; }
+  .tab-button.tab-complete.active { opacity: 0.6; }
+  .btn-tab-shortcut.tab-complete { opacity: 0.4; }
+
+  @media print {
+    .tab-bar, .sidebar-tab-shortcuts { display: none !important; }
+    .tab-content { display: block !important; }
+    .field-row.field-filled, .checklist-row.field-filled { opacity: 1 !important; }
+    .field-row.field-filled label, .field-row.field-filled input, .field-row.field-filled textarea, .field-row.field-filled select, .checklist-row.field-filled .checklist-label { color: inherit !important; }
+    .row-check { display: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="sidebar no-print">
+  <div class="sidebar-tab-shortcuts">
+    <button class="btn btn-tab-shortcut" onclick="switchTab(1)">Formation</button>
+    <button class="btn btn-tab-shortcut" onclick="switchTab(2)">Assets & Docs</button>
+  </div>
+  <button class="btn" onclick="emailToTS()" style="background:#1a73e8; color:white;">Send to TS</button>
+  <button class="btn btn-gold" onclick="window.print()">Print / PDF</button>
+  <button class="btn btn-outline" onclick="generateClientLink()" style="border-color:#4A6FA5; color:#4A6FA5;">Generate Client Link</button>
+  <button class="btn btn-outline" onclick="clearAll()" style="border-color:#c0392b; color:#c0392b;">Clear All</button>
+  <div id="autoSaveStatus" style="text-align:center; font-size:11px; color:#999; margin-top:8px; min-height:16px;"></div>
+</div>
+
+<div class="header">
+  <a href="https://ts.tax/" target="_blank"><img class="header-logo" src="data:image/png;base64,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" alt="TS Specialist Tax Services" style="height:52px; width:auto;"></a>
+  <div class="header-right">
+    LLP Formation &amp; Asset Introduction<br>
+    Client Questionnaire
+  </div>
+</div>
+<div class="subtitle-bar">
+  Please complete all relevant sections. Conditional sections will appear based on your responses.
+</div>
+
+<div class="progress-bar">
+  <span>Progress</span>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span id="progressText">0%</span>
+</div>
+
+<div class="tab-bar no-print">
+  <button class="tab-button active" data-tab="1" onclick="switchTab(1)">Formation &amp; Governance</button>
+  <button class="tab-button" data-tab="2" onclick="switchTab(2)">Assets, Documents &amp; Sign-off</button>
+</div>
+
+<div class="container">
+
+  <div class="intro-box">
+    <p>This questionnaire is intended to gather the information needed to form the LLP, draft or review the LLP agreement, prepare asset introduction documentation, prepare any declaration of trust or nominee deed, prepare capital account and loan account records, and review the proposed CGT, SDLT, income tax and IHT implications.</p>
+    <p>Please complete as fully as possible. If an answer is not yet known, mark it as <strong>TBC</strong>. Sections will appear or hide based on your responses to keep the form relevant to your circumstances.</p>
+  </div>
+
+
+
+  <!-- ============================================================ -->
+  <!-- TAB 1: FORMATION -->
+  <!-- ============================================================ -->
+
+  <div class="tab-content visible" data-tab="1">
+
+  <!-- ============================================================ -->
+  <!-- PART A: FORMATION BASICS -->
+  <!-- ============================================================ -->
+
+  <div class="section" id="sec-formation">
+    <div class="section-header" onclick="toggleSection(this)">
+      Part A — LLP Formation Details
+      <span class="chevron">&#9660;</span>
+    </div>
+    <div class="section-body">
+
+      <div class="subsection">
+        <div class="subsection-title">LLP Details</div>
+        <div class="field-row">
+          <label>Proposed LLP name <span class="required-star">*</span></label>
+          <input type="text" id="llpName" placeholder="e.g. Smith Family Investments LLP">
+        </div>
+        <div class="field-row">
+          <label>Industry / SIC description</label>
+          <input type="text" id="llpIndustry" placeholder="e.g. Property investment and management">
+        </div>
+        <div class="field-row">
+          <label>Principal place of business address</label>
+          <textarea id="llpAddress" rows="2" placeholder="Full address"></textarea>
+        </div>
+        <div class="field-row">
+          <label>Registered office</label>
+          <div class="yn-group">
+            <div class="yn-btn" onclick="selectOption(this, 'regOffice', 'client')">Client's own address</div>
+            <div class="yn-btn" onclick="selectOption(this, 'regOffice', 'ts')">TS Specialist Tax Services offices</div>
+          </div>
+        </div>
+        <div class="field-row conditional" id="regOfficeClientAddr">
+          <label>Registered office address (if different from above)</label>
+          <textarea rows="2" placeholder="Leave blank if same as principal place of business"></textarea>
+        </div>
+        <div class="field-row">
+          <label>Has name availability been checked at Companies House?</label>
+          <div class="yn-group">
+            <div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+        <div class="field-row">
+          <label>Expected accounting year end</label>
+          <input type="text" value="31 March" readonly style="background-color: #e8e8e8; cursor: not-allowed;">
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">Senior Partner / Lead Contact</div>
+        <div class="field-row">
+          <label>Full name <span class="required-star">*</span></label>
+          <input type="text" id="seniorName">
+        </div>
+        <div class="field-row">
+          <label>Email <span class="required-star">*</span></label>
+          <input type="email" id="seniorEmail">
+        </div>
+        <div class="field-row">
+          <label>Mobile</label>
+          <input type="tel" id="seniorMobile">
+        </div>
+        <div class="field-row">
+          <label>Role / relationship to family</label>
+          <input type="text" placeholder="e.g. Father, Founder, Settlor">
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">Number of Partners</div>
+        <div class="field-row">
+          <label>How many partners will the LLP have? <span class="required-star">*</span></label>
+          <select id="partnerCount" onchange="updatePartnerSections()">
+            <option value="">— Select —</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 or more</option>
+          </select>
+        </div>
+        <p class="field-note">An LLP requires a minimum of two members. Partner detail sections will appear below based on your selection.</p>
+      </div>
+
+      <!-- Partner 1 -->
+      <div class="subsection conditional visible" id="partner1Block">
+        <div class="partner-block">
+          <div class="partner-block-title">Partner 1 (Senior / Designated Member)</div>
+          <div class="field-row">
+            <label>Full legal name <span class="required-star">*</span></label>
+            <input type="text" id="partner1Name" placeholder="As it appears on official documents">
+          </div>
+          <div class="field-row">
+            <label>Date of birth <span class="required-star">*</span></label>
+            <input type="date">
+          </div>
+          <div class="field-row">
+            <label>National Insurance number</label>
+            <input type="text" placeholder="e.g. AB 12 34 56 C">
+          </div>
+          <div class="field-row">
+            <label>Nationality</label>
+            <input type="text" value="British">
+          </div>
+          <div class="field-row">
+            <label>Mother's maiden name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Father's first name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Residential address</label>
+            <textarea rows="2"></textarea>
+          </div>
+          <div class="field-row">
+            <label>Designated member?</label>
+            <div class="yn-group">
+              <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+              <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <label>UK resident and domiciled?</label>
+            <div class="yn-group">
+              <div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div>
+              <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partner 2 -->
+      <div class="subsection conditional visible" id="partner2Block">
+        <div class="partner-block">
+          <div class="partner-block-title">Partner 2</div>
+          <div class="field-row">
+            <label>Full legal name <span class="required-star">*</span></label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Date of birth <span class="required-star">*</span></label>
+            <input type="date">
+          </div>
+          <div class="field-row">
+            <label>National Insurance number</label>
+            <input type="text" placeholder="e.g. AB 12 34 56 C">
+          </div>
+          <div class="field-row">
+            <label>Nationality</label>
+            <input type="text" value="British">
+          </div>
+          <div class="field-row">
+            <label>Mother's maiden name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Father's first name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Residential address</label>
+            <textarea rows="2"></textarea>
+          </div>
+          <div class="field-row">
+            <label>Designated member?</label>
+            <div class="yn-group">
+              <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+              <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <label>UK resident and domiciled?</label>
+            <div class="yn-group">
+              <div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div>
+              <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <label>Relationship to Partner 1</label>
+            <input type="text" placeholder="e.g. Spouse, Son, Daughter, Business partner">
+          </div>
+        </div>
+      </div>
+
+      <!-- Partner 3 -->
+      <div class="subsection conditional" id="partner3Block">
+        <div class="partner-block">
+          <div class="partner-block-title">Partner 3</div>
+          <div class="field-row">
+            <label>Full legal name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Date of birth</label>
+            <input type="date">
+          </div>
+          <div class="field-row">
+            <label>National Insurance number</label>
+            <input type="text" placeholder="e.g. AB 12 34 56 C">
+          </div>
+          <div class="field-row">
+            <label>Nationality</label>
+            <input type="text" value="British">
+          </div>
+          <div class="field-row">
+            <label>Mother's maiden name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Father's first name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Residential address</label>
+            <textarea rows="2"></textarea>
+          </div>
+          <div class="field-row">
+            <label>Designated member?</label>
+            <div class="yn-group">
+              <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+              <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <label>UK resident and domiciled?</label>
+            <div class="yn-group">
+              <div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div>
+              <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <label>Relationship to Partner 1</label>
+            <input type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Partner 4 -->
+      <div class="subsection conditional" id="partner4Block">
+        <div class="partner-block">
+          <div class="partner-block-title">Partner 4</div>
+          <div class="field-row">
+            <label>Full legal name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Date of birth</label>
+            <input type="date">
+          </div>
+          <div class="field-row">
+            <label>National Insurance number</label>
+            <input type="text" placeholder="e.g. AB 12 34 56 C">
+          </div>
+          <div class="field-row">
+            <label>Nationality</label>
+            <input type="text" value="British">
+          </div>
+          <div class="field-row">
+            <label>Mother's maiden name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Father's first name</label>
+            <input type="text">
+          </div>
+          <div class="field-row">
+            <label>Residential address</label>
+            <textarea rows="2"></textarea>
+          </div>
+          <div class="field-row">
+            <label>Designated member?</label>
+            <div class="yn-group">
+              <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+              <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <label>UK resident and domiciled?</label>
+            <div class="yn-group">
+              <div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div>
+              <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <label>Relationship to Partner 1</label>
+            <input type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Partner 5+ -->
+      <div class="subsection conditional" id="partner5PlusBlock">
+        <div class="partner-block">
+          <div class="partner-block-title">Additional Partners (5+)</div>
+          <p class="field-note" style="margin-bottom:12px">Please provide full details for each additional partner below, or attach a separate schedule.</p>
+          <div class="field-row">
+            <label>Additional partner details</label>
+            <textarea rows="6" placeholder="Full name, DOB, NI number, nationality, mother's maiden name, father's first name, address — for each additional partner"></textarea>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1: MATTER OVERVIEW -->
+  <!-- ============================================================ -->
+
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      Section 1 — Matter Overview &amp; Objectives
+      <span class="chevron">&#9660;</span>
+    </div>
+    <div class="section-body">
+
+
+
+      <div class="subsection">
+        <div class="subsection-title">1.3 Which of the following are part of the proposed structure?</div>
+        <div class="checklist-row">
+          <span class="checklist-label">Family investment vehicle</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Collective management of assets</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Succession planning</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Gradual transfer of value to next generation</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="checklist-row" id="propIntroRow">
+          <span class="checklist-label">Introduction of existing properties</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+        <div class="checklist-row" id="nonPropIntroRow">
+          <span class="checklist-label">Introduction of non-property investments</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Existing third-party debt to remain in place</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Legal title to property to remain unchanged initially</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Declaration of trust / nominee deed required</span>
+          <div class="yn-group checklist-input">
+            <div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div>
+            <div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">1.4 Core commercial rationale</div>
+        <div class="field-row">
+          <label>Why is the LLP being formed? How will it operate in practice?</label>
+          <textarea rows="4" placeholder="Explain from a business and commercial perspective"></textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 2: LLP DETAILS (EXTENDED) -->
+  <!-- ============================================================ -->
+
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      Section 2 — Business Operations
+      <span class="chevron">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <div class="subsection">
+        <div class="subsection-title">Nature of Business</div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will the LLP actively manage investment property?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will the LLP collect rents through its own bank account?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will the LLP pay property outgoings itself?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will the LLP make investment decisions collectively?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will the LLP hold meetings and maintain minutes?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn selected-yes" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will any member provide management services?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will the LLP borrow from third parties?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will the LLP have employees or external managers?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Will the LLP trade as well as invest?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="checklist-row">
+          <span class="checklist-label">Any overseas activity?</span>
+          <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="field-row" style="margin-top:14px">
+          <label>VAT registration needed?</label>
+          <div class="yn-group"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div><div class="yn-btn" onclick="selectYN(this, 'tbc')">TBC</div></div>
+        </div>
+        <div class="field-row">
+          <label>PAYE registration needed?</label>
+          <div class="yn-group"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn selected-no" onclick="selectYN(this, 'no')">No</div><div class="yn-btn" onclick="selectYN(this, 'tbc')">TBC</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3: GOVERNANCE & ECONOMICS -->
+  <!-- ============================================================ -->
+
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      Section 3 — Governance &amp; Economics
+      <span class="chevron">&#9660;</span>
+    </div>
+    <div class="section-body">
+
+      <div class="subsection">
+        <div class="subsection-title">Management</div>
+        <div class="field-row"><label>Who will manage the LLP day to day?</label><select><option>Select...</option><option>Partner 1</option><option>Partner 2</option><option>Partner 3</option><option>Partner 4</option><option>All Partners</option></select></div>
+        <div class="field-row"><label>Who can sign contracts?</label><select><option>Select...</option><option>Partner 1</option><option>Partner 2</option><option>Partner 3</option><option>Partner 4</option><option>All Partners</option></select></div>
+        <div class="field-row"><label>Who can operate bank accounts?</label><select><option>Select...</option><option>Partner 1</option><option>Partner 2</option><option>Partner 3</option><option>Partner 4</option><option>All Partners</option></select></div>
+        <div class="field-row">
+          <label>Are there reserved matters requiring unanimous approval?</label>
+          <div class="yn-group">
+            <div class="yn-btn" onclick="selectYN(this, 'yes'); showConditional('reservedMattersDetail');">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no'); hideConditional('reservedMattersDetail');">No</div>
+          </div>
+        </div>
+        <div class="conditional" id="reservedMattersDetail">
+          <div class="field-row">
+            <label>Please provide details</label>
+            <textarea rows="2" placeholder="List the reserved matters"></textarea>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label>Are there any members who will provide services and be remunerated?</label>
+          <div class="yn-group">
+            <div class="yn-btn" onclick="selectYN(this, 'yes'); showConditional('remuneratedServicesDetail');">Yes</div>
+            <div class="yn-btn" onclick="selectYN(this, 'no'); hideConditional('remuneratedServicesDetail');">No</div>
+          </div>
+        </div>
+        <div class="conditional" id="remuneratedServicesDetail">
+          <div class="field-row">
+            <label>Please provide details</label>
+            <textarea rows="2" placeholder="Describe the services and remuneration arrangements"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">Economics</div>
+        <div class="field-row"><label>Initial capital contributions by each member</label><textarea rows="2" placeholder="e.g. Partner 1: £100,000 (properties), Partner 2: £100 (cash)"></textarea></div>
+        <div class="field-row">
+          <label>Whether any contributions are assets in kind</label>
+          <div class="yn-group"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="field-row">
+          <label>Whether any member will have a separate loan account</label>
+          <div class="yn-group"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="field-row">
+          <label>Whether any founder/donor is intended to keep a retained balance</label>
+          <div class="yn-group"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+        <div class="field-row">
+          <label>Whether any later gifts of capital account/loan rights are planned</label>
+          <div class="yn-group"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+  </div><!-- End Tab 1 -->
+
+  <!-- ============================================================ -->
+  <!-- TAB 2: ASSETS & CAPITAL -->
+  <!-- ============================================================ -->
+
+  <div class="tab-content" data-tab="2">
+
+  <!-- ============================================================ -->
+  <!-- SECTION 4: ASSET INTRODUCTION (always visible) -->
+  <!-- ============================================================ -->
+
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      Section 4 — Asset Introduction Overview
+      <span class="chevron">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <p class="field-note" style="margin-bottom:16px">Please list each asset to be introduced into the LLP.</p>
+
+      <div id="assetRows">
+        <div class="partner-block" style="margin-bottom:12px; position:relative;">
+          <span class="remove-asset-btn" onclick="removeAssetRow(this)" title="Remove this asset">&times;</span>
+          <div class="field-row"><label>Asset description</label><input type="text" placeholder="e.g. 12 Acacia Avenue, London"></div>
+          <div class="field-row"><label>Asset type</label>
+            <select><option value="">— Select —</option><option>Property</option><option>Quoted shares / funds</option><option>Cash</option><option>Loan receivable</option><option>Other</option></select>
+          </div>
+          <div class="field-row"><label>Current legal owner(s)</label><input type="text"></div>
+          <div class="field-row"><label>Estimated current value</label><input type="text" placeholder="£"></div>
+          <div class="field-row"><label>Cost of asset</label><input type="text" placeholder="£"></div>
+          <div class="field-row"><label>Date acquired</label><input type="date"></div>
+        </div>
+      </div>
+      <div class="add-btn" onclick="addAssetRow()">+ Add another asset</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION 14: DOCUMENTS REQUESTED -->
+  <!-- ============================================================ -->
+
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      Section 14 — Documents Requested from Us
+      <span class="chevron">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <p class="field-note" style="margin-bottom:14px">Please indicate which documents you would like us to prepare or review.</p>
+      <div class="checklist-row"><span class="checklist-label">LLP incorporation and registration support</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">LLP agreement</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">Deed of amendment to existing LLP agreement</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">Property declaration of trust / nominee deed</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">Schedule 2A / asset schedule</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">Deed of gift of part of capital account / loan account rights</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">Members' minute</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ============================================================ -->
+  <!-- SECTION 16: CLIENT CONFIRMATIONS -->
+  <!-- ============================================================ -->
+
+  <div class="section">
+    <div class="section-header" onclick="toggleSection(this)">
+      Section 16 — Client Confirmations
+      <span class="chevron">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <div class="checklist-row"><span class="checklist-label">The information supplied is complete to the best of our knowledge</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Confirmed</div><div class="yn-btn" onclick="selectYN(this, 'no')">Not yet</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">We will provide copies of supporting documents where requested</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Confirmed</div><div class="yn-btn" onclick="selectYN(this, 'no')">Not yet</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">We will notify you of any change in facts before completion</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Confirmed</div><div class="yn-btn" onclick="selectYN(this, 'no')">Not yet</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">We understand that legal title may remain unchanged initially for some properties</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Confirmed</div><div class="yn-btn" onclick="selectYN(this, 'no')">Not yet</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">We understand that bookkeeping, legal documents and practical operation must be consistent</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Confirmed</div><div class="yn-btn" onclick="selectYN(this, 'no')">Not yet</div></div>
+      </div>
+      <div class="checklist-row"><span class="checklist-label">We understand that separate analysis may be needed before any later gifts, withdrawals or changes in interests</span>
+        <div class="yn-group checklist-input"><div class="yn-btn" onclick="selectYN(this, 'yes')">Confirmed</div><div class="yn-btn" onclick="selectYN(this, 'no')">Not yet</div></div>
+      </div>
+
+      <div class="subsection" style="margin-top:24px">
+        <div class="subsection-title">Sign-off</div>
+        <div class="field-row"><label>Name of person completing questionnaire</label><input type="text"></div>
+        <div class="field-row"><label>Capacity</label><input type="text" id="capacityField" placeholder="e.g. Proposed Senior Member"></div>
+        <div class="field-row"><label>Date</label><input type="date"></div>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- End Tab 2 -->
+
+  <input type="file" id="loadFileInput" accept=".json" style="display:none" onchange="handleLoadFile(event)">
+
+  <div style="text-align:center; padding: 20px 0 40px; font-size:12px; color:#999; font-family:'Helvetica Neue',Arial,sans-serif;">
+    TS Specialist Tax Services Ltd &mdash; LLP Formation &amp; Asset Introduction Questionnaire<br>
+    Confidential &mdash; for use in connection with proposed LLP formation only
+  </div>
+
+</div>
+
+<script>
+// ---- Section collapse/expand ----
+function toggleSection(header) {
+  const body = header.nextElementSibling;
+  body.classList.toggle('hidden');
+  header.classList.toggle('collapsed');
+}
+
+// ---- Yes/No button selection ----
+function selectYN(btn, value) {
+  const group = btn.parentElement;
+  group.querySelectorAll('.yn-btn').forEach(b => {
+    b.classList.remove('selected-yes', 'selected-no');
+  });
+  if (value === 'yes') btn.classList.add('selected-yes');
+  else btn.classList.add('selected-no');
+  btn.dataset.value = value;
+  updateProgress();
+}
+
+// ---- Option selection (for registered office etc) ----
+function selectOption(btn, field, value) {
+  const group = btn.parentElement;
+  group.querySelectorAll('.yn-btn').forEach(b => {
+    b.classList.remove('selected-yes', 'selected-no');
+  });
+  btn.classList.add('selected-yes');
+
+  if (field === 'regOffice' && value === 'client') {
+    showConditional('regOfficeClientAddr');
+  } else if (field === 'regOffice') {
+    hideConditional('regOfficeClientAddr');
+  }
+  updateProgress();
+}
+
+// ---- Partner count conditional ----
+function updatePartnerSections() {
+  const count = parseInt(document.getElementById('partnerCount').value) || 0;
+  const show = (id, visible) => {
+    const el = document.getElementById(id);
+    if (el) { visible ? el.classList.add('visible') : el.classList.remove('visible'); }
+  };
+  show('partner1Block', count >= 2);
+  show('partner2Block', count >= 2);
+  show('partner3Block', count >= 3);
+  show('partner4Block', count >= 4);
+  show('partner5PlusBlock', count >= 5);
+  updateProgress();
+}
+
+// ---- Show/hide conditional sections ----
+function showConditional(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.add('visible');
+}
+function hideConditional(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.remove('visible');
+}
+
+// ---- Add asset row ----
+let assetCount = 1;
+function addAssetRow() {
+  assetCount++;
+  const container = document.getElementById('assetRows');
+  const block = document.createElement('div');
+  block.className = 'partner-block';
+  block.style.marginBottom = '12px';
+  block.style.position = 'relative';
+  block.innerHTML = `
+    <span class="remove-asset-btn" onclick="removeAssetRow(this)" title="Remove this asset">&times;</span>
+    <div class="field-row"><label>Asset description</label><input type="text"></div>
+    <div class="field-row"><label>Asset type</label>
+      <select><option value="">— Select —</option><option>Property</option><option>Quoted shares / funds</option><option>Cash</option><option>Loan receivable</option><option>Other</option></select>
+    </div>
+    <div class="field-row"><label>Current legal owner(s)</label><input type="text"></div>
+    <div class="field-row"><label>Estimated current value</label><input type="text" placeholder="£"></div>
+    <div class="field-row"><label>Cost of asset</label><input type="text" placeholder="£"></div>
+    <div class="field-row"><label>Date acquired</label><input type="date"></div>
+  `;
+  container.appendChild(block);
+  injectRowCheckboxes();
+  attachFadingListeners();
+}
+
+function removeAssetRow(btn) {
+  const block = btn.closest('.partner-block');
+  const container = document.getElementById('assetRows');
+  if (container.querySelectorAll('.partner-block').length <= 1) {
+    alert('You must have at least one asset row.');
+    return;
+  }
+  if (confirm('Remove this asset?')) {
+    block.remove();
+    assetCount--;
+    updateProgress();
+    updateTabCompletion();
+  }
+}
+
+// ---- Add property block ----
+let propertyCount = 1;
+function addPropertyBlock() {
+  propertyCount++;
+  const container = document.getElementById('propertyBlocks');
+  const block = document.createElement('div');
+  block.className = 'property-block';
+  block.innerHTML = `
+    <div class="property-block-title">Property ${propertyCount}</div>
+    <div class="subsection-title" style="margin-top:12px">Identification</div>
+    <div class="field-row"><label>Full postal address</label><textarea rows="2"></textarea></div>
+    <div class="field-row"><label>Title number(s)</label><input type="text"></div>
+    <div class="field-row"><label>Tenure</label><select><option>Freehold</option><option>Leasehold</option><option>Other</option></select></div>
+    <div class="field-row"><label>Current use</label><input type="text"></div>
+    <div class="field-row"><label>Residential / commercial / mixed</label><select><option>Residential</option><option>Commercial</option><option>Mixed use</option></select></div>
+    <div class="subsection-title" style="margin-top:18px">Ownership &amp; LLP Position</div>
+    <div class="field-row"><label>Current registered proprietor(s)</label><input type="text"></div>
+    <div class="field-row"><label>Current beneficial owner(s)</label><input type="text"></div>
+    <div class="field-row"><label>Will legal title remain unchanged initially?</label>
+      <div class="yn-group"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+    </div>
+    <div class="field-row"><label>Who should receive the credit to the Capital Account?</label><input type="text"></div>
+    <div class="field-row"><label>Capital Asset Sharing Ratio in Schedule 2A?</label><input type="text"></div>
+    <div class="subsection-title" style="margin-top:18px">Acquisition &amp; Base Cost</div>
+    <div class="field-row"><label>Date acquired</label><input type="date"></div>
+    <div class="field-row"><label>How acquired</label><select><option>Purchase</option><option>Inheritance</option><option>Gift</option><option>Transfer</option><option>Other</option></select></div>
+    <div class="field-row"><label>Acquisition price / value</label><input type="text" placeholder="£"></div>
+    <div class="field-row"><label>Enhancement expenditure</label><input type="text" placeholder="£"></div>
+    <div class="field-row"><label>Latest estimated market value</label><input type="text" placeholder="£"></div>
+    <div class="subsection-title" style="margin-top:18px">Mortgage</div>
+    <div class="field-row"><label>Is the property mortgaged?</label>
+      <div class="yn-group"><div class="yn-btn" onclick="selectYN(this, 'yes')">Yes</div><div class="yn-btn" onclick="selectYN(this, 'no')">No</div></div>
+    </div>
+    <div class="field-row"><label>Lender / current balance</label><input type="text"></div>
+  `;
+  container.appendChild(block);
+}
+
+// ---- Progress tracking ----
+function updateProgress() {
+  const allInputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select');
+  const allYN = document.querySelectorAll('.yn-btn.selected-yes, .yn-btn.selected-no');
+  let filled = 0;
+  let total = 0;
+
+  // Only count visible fields
+  allInputs.forEach(input => {
+    const section = input.closest('.conditional');
+    if (section && !section.classList.contains('visible')) return;
+    if (input.closest('.section-body.hidden')) return;
+    total++;
+    if (input.value && input.value.trim() !== '' && input.value !== '— Select —') filled++;
+  });
+
+  // Count YN selections
+  const ynGroups = document.querySelectorAll('.yn-group');
+  ynGroups.forEach(group => {
+    const section = group.closest('.conditional');
+    if (section && !section.classList.contains('visible')) return;
+    if (group.closest('.section-body.hidden')) return;
+    total++;
+    if (group.querySelector('.selected-yes, .selected-no')) filled++;
+  });
+
+  const pct = total > 0 ? Math.round((filled / total) * 100) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = pct + '%';
+}
+
+// ---- Export data as JSON ----
+function exportData() {
+  const data = {};
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((sec, i) => {
+    const title = sec.querySelector('.section-header')?.textContent?.trim()?.replace(/[▼▶]/g, '').trim() || `Section ${i+1}`;
+    const sectionData = {};
+    const rows = sec.querySelectorAll('.field-row, .checklist-row');
+    rows.forEach(row => {
+      const label = row.querySelector('label, .checklist-label')?.textContent?.trim();
+      if (!label) return;
+      const input = row.querySelector('input, textarea, select');
+      const ynSelected = row.querySelector('.yn-btn.selected-yes, .yn-btn.selected-no');
+      if (input && input.value) {
+        sectionData[label] = input.value;
+      } else if (ynSelected) {
+        sectionData[label] = ynSelected.dataset.value || ynSelected.textContent.trim();
+      }
+    });
+    if (Object.keys(sectionData).length > 0) {
+      data[title] = sectionData;
+    }
+  });
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'LLP-Questionnaire-Responses.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ---- Save progress ----
+function saveProgress() {
+  const state = { version: 2, savedAt: new Date().toISOString(), fields: [], ynButtons: [], selects: [], conditionals: [], partnerCount: document.getElementById('partnerCount').value };
+
+  // Save all input and textarea values with position index
+  document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea').forEach((el, i) => {
+    if (el.value) state.fields.push({ index: i, value: el.value });
+  });
+
+  // Save select values
+  document.querySelectorAll('select').forEach((el, i) => {
+    if (el.selectedIndex > 0) state.selects.push({ index: i, value: el.selectedIndex });
+  });
+
+  // Save YN button selections
+  document.querySelectorAll('.yn-group').forEach((group, i) => {
+    const selected = group.querySelector('.selected-yes, .selected-no');
+    if (selected) {
+      state.ynButtons.push({
+        index: i,
+        isYes: selected.classList.contains('selected-yes'),
+        btnIndex: Array.from(group.children).indexOf(selected)
+      });
+    }
+  });
+
+  // Save which conditional sections are visible
+  document.querySelectorAll('.conditional').forEach((el, i) => {
+    if (el.classList.contains('visible')) state.conditionals.push(i);
+  });
+
+  const llpName = document.getElementById('llpName').value || 'LLP';
+  const filename = `LLP-Questionnaire-${llpName.replace(/[^a-zA-Z0-9]/g, '-')}-${new Date().toISOString().slice(0,10)}.json`;
+  const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+
+  // Visual feedback
+  const btns = document.querySelectorAll('.btn-save');
+  btns.forEach(b => { b.textContent = 'Saved!'; setTimeout(() => { b.textContent = 'Save Progress'; }, 2000); });
+}
+
+// ---- Load progress ----
+function loadProgress() {
+  document.getElementById('loadFileInput').click();
+}
+
+function handleLoadFile(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const state = JSON.parse(e.target.result);
+      if (!state.version || !state.fields) { alert('This does not appear to be a valid save file.'); return; }
+
+      // Clear everything first
+      document.querySelectorAll('input, textarea').forEach(el => { el.value = ''; });
+      document.querySelectorAll('select').forEach(el => { el.selectedIndex = 0; });
+      document.querySelectorAll('.yn-btn').forEach(el => { el.classList.remove('selected-yes', 'selected-no'); });
+      document.querySelectorAll('.conditional').forEach(el => { el.classList.remove('visible'); });
+
+      // Restore partner count and trigger conditional display
+      if (state.partnerCount) {
+        document.getElementById('partnerCount').value = state.partnerCount;
+        updatePartnerSections();
+      }
+
+      // Restore input/textarea values
+      const allInputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea');
+      state.fields.forEach(f => { if (allInputs[f.index]) allInputs[f.index].value = f.value; });
+
+      // Restore selects
+      const allSelects = document.querySelectorAll('select');
+      (state.selects || []).forEach(s => { if (allSelects[s.index]) allSelects[s.index].selectedIndex = s.value; });
+
+      // Restore YN buttons
+      const allYNGroups = document.querySelectorAll('.yn-group');
+      (state.ynButtons || []).forEach(yn => {
+        const group = allYNGroups[yn.index];
+        if (group) {
+          const btn = group.children[yn.btnIndex];
+          if (btn) {
+            btn.classList.add(yn.isYes ? 'selected-yes' : 'selected-no');
+          }
+        }
+      });
+
+      // Restore conditional visibility
+      const allConditionals = document.querySelectorAll('.conditional');
+      (state.conditionals || []).forEach(idx => {
+        if (allConditionals[idx]) allConditionals[idx].classList.add('visible');
+      });
+
+      updateProgress();
+      alert('Progress loaded successfully! (Saved ' + new Date(state.savedAt).toLocaleString() + ')');
+    } catch (err) {
+      alert('Error loading file: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = ''; // reset so same file can be loaded again
+}
+
+// ---- Clear all ----
+function clearAll() {
+  if (!confirm('Are you sure you want to clear all responses? This cannot be undone.')) return;
+  document.querySelectorAll('input, textarea').forEach(el => { el.value = ''; });
+  document.querySelectorAll('select').forEach(el => { el.selectedIndex = 0; });
+  document.querySelectorAll('.yn-btn').forEach(el => { el.classList.remove('selected-yes', 'selected-no'); });
+  document.querySelectorAll('.conditional').forEach(el => { el.classList.remove('visible'); });
+  updateProgress();
+}
+
+// ---- Email to TS ----
+// IMPORTANT: Replace this URL with your deployed Vercel endpoint
+const EMAIL_API_URL = 'https://ts-questionnaire-email.vercel.app/api/send';
+
+function emailToTS() {
+  if (!confirm('This will email all your responses to TS Specialist Tax Services. Continue?')) return;
+
+  const btn = document.querySelector('.sidebar button[onclick="emailToTS()"]');
+  const origText = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  // Gather all filled fields as label/value pairs
+  const fields = [];
+  document.querySelectorAll('.field-row').forEach(row => {
+    const label = row.querySelector('label');
+    if (!label) return;
+    const labelText = label.textContent.replace(/\s*\*\s*$/, '').trim();
+
+    // Text/email/tel/date/number inputs
+    const input = row.querySelector('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"]');
+    if (input && input.value.trim()) {
+      fields.push({ label: labelText, value: input.value.trim() });
+      return;
+    }
+    // Textarea
+    const textarea = row.querySelector('textarea');
+    if (textarea && textarea.value.trim()) {
+      fields.push({ label: labelText, value: textarea.value.trim() });
+      return;
+    }
+    // Select
+    const select = row.querySelector('select');
+    if (select && select.selectedIndex > 0) {
+      fields.push({ label: labelText, value: select.options[select.selectedIndex].text });
+      return;
+    }
+    // Yes/No buttons
+    const ynSelected = row.querySelector('.yn-btn.selected-yes, .yn-btn.selected-no');
+    if (ynSelected) {
+      fields.push({ label: labelText, value: ynSelected.textContent.trim() });
+    }
+  });
+
+  // Get client/LLP name for the subject line
+  const llpNameEl = document.getElementById('llpName');
+  const clientName = (llpNameEl && llpNameEl.value.trim()) || 'Unknown Client';
+
+  fetch(EMAIL_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ clientName, fields })
+  })
+  .then(res => {
+    if (!res.ok) throw new Error('Server returned ' + res.status);
+    return res.json();
+  })
+  .then(data => {
+    btn.textContent = 'Sent!';
+    btn.style.background = '#27ae60';
+    setTimeout(() => { btn.textContent = origText; btn.style.background = '#1a73e8'; btn.disabled = false; }, 3000);
+    alert('Questionnaire emailed to TS successfully.');
+  })
+  .catch(err => {
+    btn.textContent = origText;
+    btn.disabled = false;
+    alert('Failed to send email: ' + err.message + '\n\nPlease check the API endpoint URL is configured correctly.');
+  });
+}
+
+// Initial progress
+updateProgress();
+
+// ---- Partner 1 Auto-fill from Senior Partner ----
+function setupPartner1AutoFill() {
+  const seniorNameEl = document.getElementById('seniorName');
+  const seniorEmailEl = document.getElementById('seniorEmail');
+  const seniorMobileEl = document.getElementById('seniorMobile');
+  const partner1NameEl = document.getElementById('partner1Name');
+  
+  const capacityEl = document.getElementById('capacityField');
+  if (seniorNameEl && partner1NameEl) {
+    seniorNameEl.addEventListener('input', function() {
+      partner1NameEl.value = this.value;
+      if (capacityEl) capacityEl.value = this.value;
+      updateFieldFading(partner1NameEl.closest('.field-row, .checklist-row'));
+      if (capacityEl) updateFieldFading(capacityEl.closest('.field-row, .checklist-row'));
+    });
+  }
+  if (seniorEmailEl && seniorEmailEl) {
+    seniorEmailEl.addEventListener('input', function() {
+      // Store email for future use if needed
+    });
+  }
+  if (seniorMobileEl && seniorMobileEl) {
+    seniorMobileEl.addEventListener('input', function() {
+      // Store mobile for future use if needed
+    });
+  }
+}
+
+// Call on page load
+document.addEventListener('DOMContentLoaded', setupPartner1AutoFill);
+</script>
+
+
+<script>
+function switchTab(tabNum) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('visible'));
+  const tab = document.querySelector(`.tab-content[data-tab="${tabNum}"]`);
+  if (tab) tab.classList.add('visible');
+  
+  document.querySelectorAll('.tab-button').forEach((btn, idx) => {
+    btn.classList.toggle('active', idx + 1 === tabNum);
+  });
+  
+  document.querySelectorAll('.btn-tab-shortcut').forEach((btn, idx) => {
+    btn.style.background = (idx + 1 === tabNum) ? '#2a4c75' : '#4A6FA5';
+  });
+  
+  document.querySelector('.container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function updateFieldFading(fieldRow) {
+  if (!fieldRow) return;
+  // Check ALL text-like inputs in the row (not just the first)
+  var inputs = fieldRow.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"]');
+  var textarea = fieldRow.querySelector('textarea');
+  var select = fieldRow.querySelector('select');
+  var ynGroup = fieldRow.querySelector('.yn-group');
+
+  var hasValue = false;
+  inputs.forEach(function(inp) { if (inp.value && inp.value.trim()) hasValue = true; });
+  if (textarea && textarea.value && textarea.value.trim()) hasValue = true;
+  if (select && select.selectedIndex > 0) hasValue = true;
+  if (ynGroup && ynGroup.querySelector('.selected-yes, .selected-no')) hasValue = true;
+
+  fieldRow.classList.toggle('field-filled', hasValue);
+
+  // Sync the row checkbox directly — no wrapper needed
+  var cb = fieldRow.querySelector('.row-check');
+  if (cb) {
+    cb.checked = hasValue;
+    // When a value is present, ensure field-pinned is cleared so the fade shows
+    if (hasValue && !fieldRow.classList.contains('field-pinned')) {
+      // normal case — fade applies via field-filled
+    } else if (!hasValue) {
+      fieldRow.classList.remove('field-pinned');
+    }
+  }
+}
+
+function updateAllFieldFading() {
+  document.querySelectorAll('.field-row, .checklist-row').forEach(row => updateFieldFading(row));
+  updateTabCompletion();
+}
+
+// ---- Check each tab for completion and fade its menu item ----
+function updateTabCompletion() {
+  for (let t = 1; t <= 2; t++) {
+    const tabContent = document.querySelector('.tab-content[data-tab="' + t + '"]');
+    if (!tabContent) continue;
+    let total = 0, filled = 0;
+    // Count visible text/date/email inputs, textareas, selects
+    tabContent.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea, select').forEach(el => {
+      const cond = el.closest('.conditional');
+      if (cond && !cond.classList.contains('visible')) return;
+      total++;
+      if (el.tagName === 'SELECT') { if (el.selectedIndex > 0) filled++; }
+      else { if (el.value && el.value.trim()) filled++; }
+    });
+    // Count YN groups
+    tabContent.querySelectorAll('.yn-group').forEach(group => {
+      const cond = group.closest('.conditional');
+      if (cond && !cond.classList.contains('visible')) return;
+      total++;
+      if (group.querySelector('.selected-yes, .selected-no')) filled++;
+    });
+    const complete = total > 0 && filled === total;
+    // Tab bar button
+    const tabBtn = document.querySelector('.tab-button[data-tab="' + t + '"]');
+    if (tabBtn) tabBtn.classList.toggle('tab-complete', complete);
+    // Sidebar shortcut
+    const shortcuts = document.querySelectorAll('.btn-tab-shortcut');
+    if (shortcuts[t - 1]) shortcuts[t - 1].classList.toggle('tab-complete', complete);
+  }
+}
+
+function attachFadingListeners() {
+  document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"]').forEach(input => {
+    input.addEventListener('input', function() {
+      updateFieldFading(this.closest('.field-row, .checklist-row'));
+      updateProgress();
+      updateTabCompletion();
+    });
+  });
+
+  document.querySelectorAll('textarea').forEach(ta => {
+    ta.addEventListener('input', function() {
+      updateFieldFading(this.closest('.field-row, .checklist-row'));
+      updateProgress();
+      updateTabCompletion();
+    });
+  });
+
+  document.querySelectorAll('select').forEach(sel => {
+    sel.addEventListener('change', function() {
+      updateFieldFading(this.closest('.field-row, .checklist-row'));
+      updateProgress();
+      updateTabCompletion();
+    });
+  });
+}
+
+const originalSelectYN = window.selectYN;
+window.selectYN = function(btn, value) {
+  originalSelectYN(btn, value);
+  updateFieldFading(btn.closest('.field-row, .checklist-row'));
+  updateProgress();
+  updateTabCompletion();
+};
+
+if (window.saveProgress) {
+  const origSave = window.saveProgress;
+  window.saveProgress = function() {
+    origSave();
+  };
+}
+
+if (window.loadProgress) {
+  const origLoad = window.loadProgress;
+  window.loadProgress = function() {
+    origLoad();
+    updateAllFieldFading();
+  };
+}
+
+if (window.clearAll) {
+  const origClear = window.clearAll;
+  window.clearAll = function() {
+    origClear();
+    updateAllFieldFading();
+  };
+}
+
+// ---- Inject checkboxes beside every field/checklist row ----
+function injectRowCheckboxes() {
+  document.querySelectorAll('.field-row, .checklist-row').forEach(row => {
+    if (row.querySelector('.row-check')) return;
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.className = 'row-check';
+    cb.title = 'Tick when complete';
+    cb.addEventListener('change', function(e) {
+      e.stopPropagation();
+      if (this.checked) {
+        // User ticked → remove pin so field-filled fade shows
+        row.classList.remove('field-pinned');
+        // Also ensure field-filled is set (re-evaluate)
+        updateFieldFading(row);
+      } else {
+        // User unticked → pin the row visible for review
+        row.classList.add('field-pinned');
+      }
+    });
+    row.appendChild(cb);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  switchTab(1);
+  injectRowCheckboxes();
+  attachFadingListeners();
+  setTimeout(function() {
+    updateAllFieldFading();
+  }, 100);
+});
+</script>
+
+<!-- ============================================================ -->
+<!-- Supabase auto-save / auto-load / generate client link         -->
+<!-- ============================================================ -->
+<script>
+(function() {
+  var API_BASE = 'https://ts-questionnaire-email.vercel.app/api/form';
+  var formId = null;       // set when loaded from URL or after first save
+  var saveTimer = null;
+  var isSaving = false;
+
+  // ---- Get form ID from URL (?id=xxx) ----
+  function getFormIdFromURL() {
+    var params = new URLSearchParams(window.location.search);
+    return params.get('id') || null;
+  }
+
+  // ---- Collect current form state (reuse existing save logic) ----
+  function collectFormState() {
+    var state = {
+      version: 3,
+      fields: [],
+      ynButtons: [],
+      selects: [],
+      conditionals: [],
+      partnerCount: document.getElementById('partnerCount').value
+    };
+
+    document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea').forEach(function(el, i) {
+      if (el.value) state.fields.push({ index: i, value: el.value });
+    });
+
+    document.querySelectorAll('select').forEach(function(el, i) {
+      if (el.selectedIndex > 0) state.selects.push({ index: i, value: el.selectedIndex });
+    });
+
+    document.querySelectorAll('.yn-group').forEach(function(group, i) {
+      var selected = group.querySelector('.selected-yes, .selected-no');
+      if (selected) {
+        state.ynButtons.push({
+          index: i,
+          isYes: selected.classList.contains('selected-yes'),
+          btnIndex: Array.from(group.children).indexOf(selected)
+        });
+      }
+    });
+
+    document.querySelectorAll('.conditional').forEach(function(el, i) {
+      if (el.classList.contains('visible')) state.conditionals.push(i);
+    });
+
+    return state;
+  }
+
+  // ---- Restore form state from data ----
+  function restoreFormState(state) {
+    if (!state || !state.fields) return;
+
+    // Clear everything first
+    document.querySelectorAll('input:not([type="checkbox"]):not([readonly]), textarea').forEach(function(el) { el.value = ''; });
+    document.querySelectorAll('select').forEach(function(el) { el.selectedIndex = 0; });
+    document.querySelectorAll('.yn-btn').forEach(function(el) { el.classList.remove('selected-yes', 'selected-no'); });
+    document.querySelectorAll('.conditional').forEach(function(el) { el.classList.remove('visible'); });
+
+    // Restore partner count
+    if (state.partnerCount) {
+      document.getElementById('partnerCount').value = state.partnerCount;
+      updatePartnerSections();
+    }
+
+    // Restore inputs/textareas
+    var allInputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea');
+    (state.fields || []).forEach(function(f) { if (allInputs[f.index]) allInputs[f.index].value = f.value; });
+
+    // Restore selects
+    var allSelects = document.querySelectorAll('select');
+    (state.selects || []).forEach(function(s) { if (allSelects[s.index]) allSelects[s.index].selectedIndex = s.value; });
+
+    // Restore YN buttons
+    var allYNGroups = document.querySelectorAll('.yn-group');
+    (state.ynButtons || []).forEach(function(yn) {
+      var group = allYNGroups[yn.index];
+      if (group) {
+        var btn = group.children[yn.btnIndex];
+        if (btn) btn.classList.add(yn.isYes ? 'selected-yes' : 'selected-no');
+      }
+    });
+
+    // Restore conditionals
+    var allConditionals = document.querySelectorAll('.conditional');
+    (state.conditionals || []).forEach(function(idx) {
+      if (allConditionals[idx]) allConditionals[idx].classList.add('visible');
+    });
+
+    updateProgress();
+    updateAllFieldFading();
+  }
+
+  // ---- Show auto-save status ----
+  function showStatus(msg, colour) {
+    var el = document.getElementById('autoSaveStatus');
+    if (!el) return;
+    el.textContent = msg;
+    el.style.color = colour || '#999';
+    if (msg) {
+      setTimeout(function() { el.textContent = ''; }, 3000);
+    }
+  }
+
+  // ---- Save to server ----
+  function saveToServer() {
+    if (isSaving) return;
+    isSaving = true;
+    var state = collectFormState();
+    var clientName = (document.getElementById('llpName').value || '').trim() || 'Unknown';
+
+    if (formId) {
+      // Update existing
+      fetch(API_BASE, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: formId, form_state: state })
+      })
+      .then(function(r) { if (r.ok) showStatus('Saved', '#27ae60'); else showStatus('Save failed', '#c0392b'); })
+      .catch(function() { showStatus('Save failed — offline?', '#c0392b'); })
+      .finally(function() { isSaving = false; });
+    } else {
+      // Create new
+      fetch(API_BASE, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ client_name: clientName, form_state: state })
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.id) {
+          formId = data.id;
+          // Update URL without reload so future saves use PUT
+          window.history.replaceState({}, '', '?id=' + formId);
+          showStatus('Saved', '#27ae60');
+        } else {
+          showStatus('Save failed', '#c0392b');
+        }
+      })
+      .catch(function() { showStatus('Save failed — offline?', '#c0392b'); })
+      .finally(function() { isSaving = false; });
+    }
+  }
+
+  // ---- Debounced auto-save (triggers 3 seconds after last change) ----
+  function scheduleSave() {
+    if (saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(saveToServer, 3000);
+  }
+
+  // ---- Hook auto-save into all form changes ----
+  function attachAutoSaveListeners() {
+    document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea').forEach(function(el) {
+      el.addEventListener('input', scheduleSave);
+    });
+    document.querySelectorAll('select').forEach(function(el) {
+      el.addEventListener('change', scheduleSave);
+    });
+    // YN buttons — hook into the existing selectYN wrapper
+    var origSelectYN2 = window.selectYN;
+    window.selectYN = function(btn, value) {
+      origSelectYN2(btn, value);
+      scheduleSave();
+    };
+  }
+
+  // ---- Load from server ----
+  function loadFromServer(id) {
+    fetch(API_BASE + '?id=' + encodeURIComponent(id))
+      .then(function(r) {
+        if (!r.ok) throw new Error('not found');
+        return r.json();
+      })
+      .then(function(data) {
+        if (data.form_state) {
+          restoreFormState(data.form_state);
+          formId = id;
+          showStatus('Loaded', '#27ae60');
+        }
+      })
+      .catch(function() {
+        showStatus('Could not load form — check the link', '#c0392b');
+      });
+  }
+
+  // ---- Generate Client Link ----
+  window.generateClientLink = function() {
+    var state = collectFormState();
+    var clientName = (document.getElementById('llpName').value || '').trim() || 'Unknown';
+
+    var btn = document.querySelector('[onclick="generateClientLink()"]');
+    if (btn) { btn.textContent = 'Generating...'; btn.disabled = true; }
+
+    var method = formId ? 'PUT' : 'POST';
+    var body = formId
+      ? { id: formId, form_state: state }
+      : { client_name: clientName, form_state: state };
+
+    fetch(API_BASE, {
+      method: method,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var linkId = formId || data.id;
+      if (data.id) formId = data.id;
+      if (formId && !window.location.search.includes('id=')) {
+        window.history.replaceState({}, '', '?id=' + formId);
+      }
+      var url = 'https://ts-questionnaire-email.vercel.app/questionnaire?id=' + linkId;
+      // Copy to clipboard
+      navigator.clipboard.writeText(url).then(function() {
+        alert('Client link copied to clipboard:\n\n' + url);
+      }).catch(function() {
+        prompt('Copy this link and send to your client:', url);
+      });
+    })
+    .catch(function(err) {
+      alert('Failed to generate link: ' + err.message);
+    })
+    .finally(function() {
+      if (btn) { btn.textContent = 'Generate Client Link'; btn.disabled = false; }
+    });
+  };
+
+  // ---- Initialise ----
+  document.addEventListener('DOMContentLoaded', function() {
+    var urlId = getFormIdFromURL();
+    if (urlId) {
+      loadFromServer(urlId);
+    }
+    // Start auto-save listeners after a short delay to let other init finish
+    setTimeout(attachAutoSaveListeners, 200);
+  });
+
+})();
+</script>
+</body>
+</html>
