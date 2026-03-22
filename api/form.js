@@ -76,7 +76,7 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Failed to create form', detail: result.data });
     }
 
-    return res.status(201).json({ id, url: `${req.headers.origin || 'https://ts-questionnaire-email.vercel.app'}/questionnaire?id=${id}` });
+    return res.status(201).json({ id, url: `${req.headers.origin || 'https://ts-questionnaire-email.vercel.app'}/questionnaire.html?id=${id}` });
   }
 
   // --- PUT: Update an existing form ---
